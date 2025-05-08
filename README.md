@@ -1,16 +1,17 @@
 # 🧼 CleanStream ETL
 
-A simple yet powerful Python ETL pipeline that ingests raw data from a CSV file, cleans and transforms it using Pandas, and loads it into a SQLite database using SQLAlchemy.
+A simple yet powerful Python ETL pipeline that ingests raw data from a CSV or JSON file, cleans and transforms it using Pandas, and loads it into a SQLite database using SQLAlchemy.
 
 ---
 
 ## 🚀 Features
 
-- ✅ Extracts data from CSV (JSON support coming soon)
+- ✅ Extracts data from CSV & JSON
 - 🧹 Cleans and normalizes column names
 - 🔁 Transforms raw records into Python ORM objects
 - 💾 Loads clean data into a SQLite database
 - 🔎 Includes a query script to filter, search, and count records
+- ⚙️ Accepts dynamic input file path via command-line argument
 
 ---
 
@@ -29,7 +30,8 @@ A simple yet powerful Python ETL pipeline that ingests raw data from a CSV file,
 ```
 CleanStream-ETL/
 ├── data/
-│   └── sample_data.csv
+│   ├── sample_data.csv
+│   └── sample_data.json
 ├── models.py          # SQLAlchemy table schema
 ├── db_setup.py        # Initializes database
 ├── etl_pipeline.py    # Extracts, cleans, loads data
@@ -66,7 +68,9 @@ CleanStream-ETL/
 
 5. **Run the ETL pipeline**
    ```bash
-   python etl_pipeline.py
+   python etl_pipeline.py --file data/sample_data.csv
+   # or for JSON:
+   python etl_pipeline.py --file data/sample_data.json
    ```
 
 6. **Query the data**
@@ -82,15 +86,16 @@ CleanStream-ETL/
 - How to use Pandas for data cleaning
 - How to model and interact with a database using SQLAlchemy ORM
 - How to organize a Python project professionally
+- How to make your Python scripts dynamic and user-friendly with argparse
 
 ---
 
 ## 🔮 Future Enhancements
 
-- JSON ingestion support
 - PostgreSQL version with cloud deployment
 - Logging and error handling
-- CLI options for dynamic filtering
+- Docker support for deployment
+- CLI menu interface for queries
 
 ---
 
