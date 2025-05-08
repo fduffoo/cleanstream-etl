@@ -1,0 +1,5 @@
+[
+  {"name": "Laptop Stand", "category": "Office", "price": 29.99, "quantity": 75},
+  {"name": "Resistance Band", "category": "Fitness", "price": 12.50, "quantity": 150},
+  {"name": "Smart Plug", "category": "Home", "price": 22.00, "quantity": 60}
+]
